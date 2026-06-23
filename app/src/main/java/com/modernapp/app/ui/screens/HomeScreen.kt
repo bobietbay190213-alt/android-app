@@ -177,19 +177,21 @@ fun HomeScreen(
                             verticalArrangement = Arrangement.spacedBy(12.dp)
                         ) {
                             itemsIndexed(items, key = { _, item -> item.id }) { index, item ->
-                                AnimatedVisibility(
-                                    visible = true,
-                                    enter = fadeIn(tween(300, delayMillis = index * 50)) +
-                                            slideInVertically(tween(300, delayMillis = index * 50)) { it / 2 }
-                                ) {
-                                    ItemCard(
-                                        item = item,
-                                        onClick = { onNavigateToDetail(item.id) },
-                                        onFavoriteClick = {
-                                            viewModel.toggleFavorite(item.id, item.isFavorite)
-                                        },
-                                        onDeleteClick = { viewModel.deleteItem(item.id) }
-                                    )
+                                Box {
+                                    AnimatedVisibility(
+                                        visible = true,
+                                        enter = fadeIn(tween(300, delayMillis = index * 50)) +
+                                                slideInVertically(tween(300, delayMillis = index * 50)) { it / 2 }
+                                    ) {
+                                        ItemCard(
+                                            item = item,
+                                            onClick = { onNavigateToDetail(item.id) },
+                                            onFavoriteClick = {
+                                                viewModel.toggleFavorite(item.id, item.isFavorite)
+                                            },
+                                            onDeleteClick = { viewModel.deleteItem(item.id) }
+                                        )
+                                    }
                                 }
                             }
                         }
