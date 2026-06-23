@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ModernApp</string>
+    <string name="app_tagline">Ứng dụng hiện đại của bạn</string>
+
+    <!-- Navigation -->
+    <string name="home">Trang chủ</string>
+    <string name="detail">Chi tiết</string>
+    <string name="settings">Cài đặt</string>
+    <string name="back">Quay lại</string>
+
+    <!-- Home Screen -->
+    <string name="search_hint">Tìm kiếm...</string>
+    <string name="add_item">Thêm mới</string>
+    <string name="no_items">Chưa có dữ liệu\nNhấn + để thêm mới</string>
+    <string name="refresh">Làm mới</string>
+
+    <!-- Item -->
+    <string name="title">Tiêu đề</string>
+    <string name="description">Mô tả</string>
+    <string name="save">Lưu</string>
+    <string name="cancel">Hủy</string>
+    <string name="edit">Chỉnh sửa</string>
+    <string name="delete">Xóa</string>
+    <string name="favorite">Yêu thích</string>
+
+    <!-- Settings -->
+    <string name="theme">Giao diện</string>
+    <string name="theme_system">Theo hệ thống</string>
+    <string name="theme_light">Sáng</string>
+    <string name="theme_dark">Tối</string>
+    <string name="language">Ngôn ngữ</string>
+    <string name="lang_vietnamese">Tiếng Việt</string>
+    <string name="lang_english">English</string>
+    <string name="data_management">Quản lý dữ liệu</string>
+    <string name="delete_all_data">Xóa tất cả dữ liệu</string>
+    <string name="delete_all_data_desc">Xóa toàn bộ dữ liệu trong ứng dụng</string>
+    <string name="backup_data">Sao lưu dữ liệu</string>
+    <string name="backup_data_desc">Sao lưu dữ liệu của bạn an toàn</string>
+    <string name="confirm_delete">Xác nhận xóa</string>
+    <string name="confirm_delete_desc">Bạn có chắc chắn muốn xóa tất cả dữ liệu? Hành động này không thể hoàn tác.</string>
+
+    <!-- Errors -->
+    <string name="error_network">Lỗi kết nối mạng. Vui lòng thử lại.</string>
+    <string name="error_unknown">Đã xảy ra lỗi không mong đợi.</string>
+    <string name="error_empty_title">Tiêu đề không được để trống.</string>
+</resources>
