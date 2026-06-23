@@ -1,9 +1,5 @@
 package com.modernapp.app.ui.screens
 
-import androidx.compose.animation.AnimatedVisibility
-import androidx.compose.animation.core.tween
-import androidx.compose.animation.fadeIn
-import androidx.compose.animation.slideInVertically
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -176,23 +172,15 @@ fun HomeScreen(
                             contentPadding = PaddingValues(16.dp),
                             verticalArrangement = Arrangement.spacedBy(12.dp)
                         ) {
-                            itemsIndexed(items, key = { _, item -> item.id }) { index, item ->
-                                Box {
-                                    AnimatedVisibility(
-                                        visible = true,
-                                        enter = fadeIn(tween(300, delayMillis = index * 50)) +
-                                                slideInVertically(tween(300, delayMillis = index * 50)) { it / 2 }
-                                    ) {
-                                        ItemCard(
-                                            item = item,
-                                            onClick = { onNavigateToDetail(item.id) },
-                                            onFavoriteClick = {
-                                                viewModel.toggleFavorite(item.id, item.isFavorite)
-                                            },
-                                            onDeleteClick = { viewModel.deleteItem(item.id) }
-                                        )
-                                    }
-                                }
+                            itemsIndexed(items, key = { _, item -> item.id }) { _, item ->
+                                ItemCard(
+                                    item = item,
+                                    onClick = { onNavigateToDetail(item.id) },
+                                    onFavoriteClick = {
+                                        viewModel.toggleFavorite(item.id, item.isFavorite)
+                                    },
+                                    onDeleteClick = { viewModel.deleteItem(item.id) }
+                                )
                             }
                         }
                     }
