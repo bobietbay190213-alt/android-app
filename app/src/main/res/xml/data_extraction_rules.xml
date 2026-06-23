@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<data-extraction-rules>
-    <cloud-backup>
-        <include domain="sharedpref" path="."/>
-        <exclude domain="database" path="modern_app_database"/>
-    </cloud-backup>
-</data-extraction-rules>
+  <data-extraction-rules>
+      <cloud-backup>
+          <include domain="sharedpref" path="."/>
+          <include domain="database" path="."/>
+          <exclude domain="database" path="modern_app_database"/>
+      </cloud-backup>
+  </data-extraction-rules>
